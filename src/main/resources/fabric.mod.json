@@ -1,0 +1,44 @@
+{
+	"schemaVersion": 1,
+	"id": "snow-mod",
+	"version": "${version}",
+	"name": "SNOW Mod",
+	"description": "This is a test mod!",
+	"authors": [
+		"YXN"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/yxnnb/fabric_mod-1.20.4"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/snow-mod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"org.snow.SNOWmod"
+		],
+		"client": [
+			"org.snow.SNOWModClient"
+		],
+		"fabric-datagen": [
+			"org.snow.SNOWModDataGenerator"
+		]
+	},
+	"mixins": [
+		"snow-mod.mixins.json",
+		{
+			"config": "snow-mod.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.15.6",
+		"minecraft": "~1.20.4",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
